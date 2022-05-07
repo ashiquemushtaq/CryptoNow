@@ -1,0 +1,129 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: #053F5E;
+}
+
+.logo {
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.spinner-div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #053F5E;
+}
+
+.header {
+    color: #FFD700;
+    margin-bottom: 10px;
+    padding: 1rem 5rem;
+}
+
+.elements {
+    color: #ffff;
+    margin-bottom: 5px;
+    padding: 0.8rem 5rem;
+    text-align: center;
+}
+
+.elements:hover {
+    padding: 1.2rem 5rem;
+}
+
+.link {
+    color: #ffff;
+    border-bottom: 1px solid #FFD700;
+}
+
+.link:hover {
+    transition: ease-in 0.3s;
+    color: #F39422;
+    border-bottom: none;
+}
+
+section {
+    padding: 1rem 5rem 0rem 5rem;
+    height: 100%;
+}
+
+
+.btn-back {
+    padding: 5px 10px;
+    background-color: #053F5E;
+    color: #FFD700;
+    font-weight: 600;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    width: 90px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-back:hover {
+    transition: ease-in 0.3s;
+    color: #F39422;
+}
+
+.coin-details {
+    color: #ffff;
+}
+
+.content span {
+    color: #FFD700;
+}
+
+.content a {
+    text-decoration: none;
+    color: #FFD700;
+    border-bottom: 1px solid #ffff;
+    margin-right: 20px;
+}
+
+.content a:hover {
+    transition: ease-in 0.3s;
+    color: #F39422;
+    border-bottom: none;
+}
+
+/* 760px */
