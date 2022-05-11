@@ -7,7 +7,7 @@ const Home = () => {
   const [crypto, setCrypto] = useState(null);
   const fetchData = async () => {
     const response = await fetch(
-      "https://api.coinstats.app/public/v1/coins?skip=0&limit=10&currency=INR"
+      "https://api.coinstats.app/public/v1/coins?skip=0&currency=INR"
     );
     setCrypto(await response.json());
   };
@@ -18,16 +18,10 @@ const Home = () => {
     <div className="home">
       {crypto ? (
         <>
-          <div className="table header">
-            <h3>Name</h3>
-            <h3>Price</h3>
-            <h3>Market Cap</h3>
-            <h3>Volume</h3>
-          </div>
           {crypto.coins.map((currElem, i) => {
             return (
-              <div className="table elements" key={i}>
-                <span>
+              <div className="card" key={i}>
+                <h3>
                   <Link
                     className="link"
                     to={`coin/${currElem.id}`}
@@ -37,10 +31,19 @@ const Home = () => {
                   >
                     {currElem.name}
                   </Link>
-                </span>
-                <span>₹{currElem.price}</span>
-                <span>{currElem.marketCap}</span>
-                <span>{currElem.volume}</span>
+                </h3>
+                <h4>
+                  Price:
+                  <span> ₹{currElem.price}</span>
+                </h4>
+                <h4>
+                  Market Cap:
+                  <span> {currElem.marketCap}</span>
+                </h4>
+                <h4>
+                  Volume:
+                  <span> {currElem.volume}</span>
+                </h4>
               </div>
             );
           })}
