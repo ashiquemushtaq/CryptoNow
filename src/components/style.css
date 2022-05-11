@@ -104,7 +104,6 @@ section {
 
 .coin-details {
     color: #ffff;
-    margin-left: 40%;
 }
 
 .content {
@@ -137,20 +136,18 @@ section {
         padding: 1rem 2.5rem;
     }
 
-    .home {
+    section {
         padding: 1rem 2.5rem;
     }
 
-    .header {
-        padding: 1rem 2.5rem;
+}
+
+@media only screen and (max-width: 560px) {
+    nav {
+        padding: 1rem;
     }
 
-    .elements {
-        padding: 0.8rem 2.5rem;
+    section {
+        padding: 1rem;
     }
-
-    .elements:hover {
-        padding: 1rem 2.5rem;
-    }
-
 }
