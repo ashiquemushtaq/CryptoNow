@@ -54,6 +54,8 @@ nav {
     align-items: center;
     padding: 1rem;
     width: 300px;
+    border: 1px solid #FFD700;
+    border-radius: 7px;
 }
 
 .card h3 {
@@ -79,8 +81,6 @@ nav {
 
 section {
     padding: 1rem 5rem;
-    height: 100%;
-    width: 100%;
 }
 
 
@@ -102,8 +102,18 @@ section {
     color: #F39422;
 }
 
+.coin {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
 .coin-details {
     color: #ffff;
+    background-color: #053F5E;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .content {
@@ -157,5 +167,9 @@ section {
 
     section {
         padding: 1rem;
+    }
+
+    .coin {
+        padding-top: 1;
     }
 }
