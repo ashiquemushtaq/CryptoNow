@@ -5,16 +5,30 @@ import { useState, useEffect } from "react";
 
 const Coin = () => {
   const [coin, setCoin] = useState(null);
+  const [title, setTitle] = useState(false);
   const { name } = useParams();
   const fetchData = async () => {
     const res = await fetch(
       `https://api.coinstats.app/public/v1/coins/${name}?currency=INR`
     );
     setCoin(await res.json());
+    setTitle(!title);
   };
   useEffect(() => {
     fetchData();
+    console.log("run fetch");
   }, []);
+
+  useEffect(() => {
+    console.log("run");
+    if (coin) {
+      document.title = coin.coin.name;
+    }
+    return () => {
+      document.title = "Crypto Now";
+    };
+  });
+
   return (
     <section>
       <Link to="/">
