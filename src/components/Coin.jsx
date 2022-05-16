@@ -16,11 +16,9 @@ const Coin = () => {
   };
   useEffect(() => {
     fetchData();
-    console.log("run fetch");
   }, []);
 
   useEffect(() => {
-    console.log("run");
     if (coin) {
       document.title = coin.coin.name;
     }
