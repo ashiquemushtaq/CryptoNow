@@ -7,7 +7,7 @@ const Home = () => {
   const [crypto, setCrypto] = useState(null);
   const fetchData = async () => {
     const response = await fetch(
-      "https://api.coinstats.app/public/v1/coins?skip=0&currency=INR"
+      "https://api.coinstats.app/public/v1/coins?skip=0&currency=GBP"
     );
     setCrypto(await response.json());
   };
