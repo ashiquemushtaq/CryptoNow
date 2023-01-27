@@ -34,7 +34,7 @@ const Home = () => {
                 </h3>
                 <h4>
                   Price:
-                  <span> £{currElem.price}</span>
+                  <span> £ {currElem.price}</span>
                 </h4>
                 <h4>
                   Market Cap:
