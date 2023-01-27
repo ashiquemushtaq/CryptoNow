@@ -9,7 +9,7 @@ const Coin = () => {
   const { name } = useParams();
   const fetchData = async () => {
     const res = await fetch(
-      `https://api.coinstats.app/public/v1/coins/${name}?currency=INR`
+      `https://api.coinstats.app/public/v1/coins/${name}?currency=GBP`
     );
     setCoin(await res.json());
     setTitle(!title);
@@ -47,7 +47,7 @@ const Coin = () => {
                 Symbol:<span>{coin.coin.symbol}</span>
               </h4>
               <h4>
-                Price:<span>{coin.coin.price} INR</span>
+                Price:<span>{coin.coin.price} GBP</span>
               </h4>
               <h4>
                 Volume:<span>{coin.coin.volume}</span>
